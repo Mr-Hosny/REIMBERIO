@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ART PRODUCTS</title>
+  <!-- STYLE CSS -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Marcellus&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul li {
+      list-style-type: none;
+    }
+
+    img {
+      height: 100px;
+      width: 100px;
+    }
+
+    .btn {
+      border: 1px solid black;
+      border-radius: 25px;
+      padding: 6px 12px;
+      font-size: 14px;
+      margin: 1rem 0;
+      color: black;
+      background: transparent;
+      font-family: sans-serif;
+    }
+
+    .project {
+      width: 600px;
+      border: 1px solid black;
+      margin: 1rem auto;
+    }
+
+    nav {
+      height: 60px;
+      text-align: center;
+    }
+
+    nav .logo {
+      height: 50px;
+      width: 50px;
+    }
+
+    header {
+      border-top: 3px solid rgb(63, 87, 29);
+      border-bottom: 3px solid rgb(73, 102, 29);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    header .img-1 {
+      height: 300px;
+      width: 200px;
+      margin-bottom: -0.25rem;
+    }
+
+    .header-info {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .header-info h1 {
+      font-size: 42px;
+      font-family: "Livvic";
+      font-weight: 300;
+    }
+
+    .header-info p {
+      font-size: 16px;
+      font-family: sans-serif;
+      text-align: start;
+      margin: 1rem 0;
+    }
+
+    .header-info .item-btn {
+      margin-top: 2rem;
+    }
+
+    .header-info .btn {
+      font-size: 17px;
+      font-family: sans-serif;
+      padding: 10px 16px;
+    }
+
+    .products {
+      padding: 1rem;
+    }
+
+    .products h1 {
+      font-style: italic;
+      font-size: 40px;
+      font-family: "Kalnia";
+      font-weight: 500;
+      text-align: center;
+      letter-spacing: 0.75px;
+    }
+
+    .products-list {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .product-item {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .product-item img {
+      height: 200px;
+      width: 160px;
+      margin-bottom: 1rem;
+    }
+
+    .info-content {
+      background-color: rgb(218 241 230);
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      border-top: 2px solid rgb(12, 65, 43);
+      border-bottom: 2px solid rgb(12, 65, 43);
+    }
+
+    .info-content h1 {
+      font-size: 48px;
+      font-family: "Marcellus";
+      font-style: normal;
+      font-weight: 400;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .info-content p {
+      text-align: start;
+      padding: 1rem 2rem;
+      font-size: 18px;
+    }
+
+    .info-content img {
+      height: 280px;
+      width: 210px;
+      margin-bottom: -0.3rem;
+    }
+
+    footer {
+      background-color: rgb(177 193 163);
+      padding: 0.75rem;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .email-icon {
+      background-color: whitesmoke;
+      padding: 5px 10px;
+      border-radius: 50%;
+    }
+
+    .email-icon img {
+      height: 30px;
+      width: 26px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .link-email {
+      color: black;
+    }
+
+    /* MEDIA QUERY */
+    @media screen and (max-width: 640px) {
+      .project {
+        width: 510px;
+        margin: 2rem auto;
+      }
+    }
+
+    @media screen and (max-width: 545px) {
+      .project {
+        width: 438px;
+        margin: 2rem auto;
+      }
+
+      nav {
+        height: 50px;
+        text-align: center;
+      }
+
+      nav .logo {
+        height: 45px;
+        width: 45px;
+      }
+
+      /* header */
+
+      header {
+        border-top: 2px solid rgb(63, 87, 29);
+        border-bottom: 2px solid rgb(73, 102, 29);
+      }
+
+      header .img-1 {
+        height: 260px;
+        width: 160px;
+        margin-bottom: -0.25rem;
+      }
+
+      .header-info h1 {
+        font-size: 34px;
+        font-family: "Livvic";
+        font-weight: 300;
+      }
+
+      .header-info p {
+        font-size: 14px;
+      }
+
+      .header-info .btn {
+        font-size: 14px;
+        padding: 8px 14px;
+      }
+
+      /* new collection */
+
+      .products {
+        padding: 1rem;
+      }
+
+      .products h1 {
+        font-size: 34px;
+      }
+
+      .products-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+      }
+
+      .product-item {
+        margin: 1rem 0;
+      }
+
+      .product-item img {
+        height: 300px;
+        width: 230px;
+      }
+
+      .product-item .btn {
+        font-size: 16px;
+        padding: 10px 16px;
+      }
+
+      .info-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      .info-content h1 {
+        font-size: 40px;
+      }
+
+      .info-content p {
+        text-align: center;
+        padding: 2rem;
+        font-size: 20px;
+      }
+
+      .info-content img {
+        height: 300px;
+        width: 260px;
+        margin: 0 auto;
+      }
+
+    }
+
+    @media screen and (max-width: 473px) {
+      .project {
+        width: 398px;
+        margin: 2rem auto;
+      }
+    }
+
+    @media screen and (max-width: 430px) {
+      .project {
+        width: 368px;
+        margin: 2rem auto;
+      }
+
+      nav {
+        height: 75px;
+        text-align: center;
+        padding: 0.75rem 0;
+      }
+
+      nav .logo {
+        height: 60px;
+        width: 60px;
+      }
+
+      header .img-1 {
+        height: 270px;
+        width: 160px;
+        margin-bottom: -0.25rem;
+      }
+
+    }
+
+    @media screen and (max-width: 398px) {
+      .project {
+        width: 338px;
+        margin: 2rem auto;
+      }
+
+      nav {
+        height: 75px;
+        text-align: center;
+        padding: 0.75rem 0;
+      }
+
+      nav .logo {
+        height: 60px;
+        width: 60px;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        text-align: center;
+        padding: 0.75rem 0;
+      }
+
+      header .img-1 {
+        height: 280px;
+        width: 180px;
+        margin-bottom: -0.25rem;
+      }
+
+      .header-info p {
+        text-align: center;
+      }
+
+    }
+
+    @media screen and (max-width: 370px) {
+      .project {
+        width: 298px;
+      }
+
+      .products h1 {
+        font-size: 26px;
+      }
+
+    }
+
+    @media screen and (max-width: 338px) {
+      .project {
+        width: 268px;
+      }
+
+      .info-content img {
+        width: 230px;
+      }
+
+      footer {
+        padding: 0.75rem 0.5rem;
+      }
+
+      .email-icon {
+        background-color: whitesmoke;
+        padding: 2px 6px;
+        border-radius: 50%;
+      }
+
+      .email-icon img {
+        height: 24px;
+        width: 18px;
+      }
+
+      .link-email {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="project">
+    <nav>
+      <img src="https://imagedelivery.net/B8t-3bYtbGcan-sTq11_Yg/397432d4-55c3-44c5-4902-441b48de8f00/public" alt="SHC"
+        class="logo">
+    </nav>
+    <header>
+      <div>
+        <img src="https://imagedelivery.net/B8t-3bYtbGcan-sTq11_Yg/f5443dc2-4a43-4b53-6fa5-714b70706d00/public"
+          alt="IMG1" class="img-1">
+      </div>
+      <div class="header-info">
+        <h1>Summer <br>
+          season!
+        </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+        <div class="item-btn">
+          <a href="CTA" class="btn CTA-btn">SHOP NOW</a>
+        </div>
+      </div>
+    </header>
+    <div class="products">
+      <h1>New Collection</h1>
+      <div class="products-list">
+        <div class="product-item">
+          <img src="https://imagedelivery.net/B8t-3bYtbGcan-sTq11_Yg/ad9c8da2-8956-4622-829f-6cacf1759000/public"
+            alt="IMG3"> <br>
+          <div>
+            <a href="CTA" class="btn CTA-btn">SHOP NOW</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="https://imagedelivery.net/B8t-3bYtbGcan-sTq11_Yg/43238eff-de50-452b-52b4-aa4c1fc9c300/public"
+            alt="IMG4"> <br>
+          <div>
+            <a href="CTA" class="btn CTA-btn">SHOP NOW</a>
+          </div>
+        </div>
+        <div class="product-item">
+          <img src="https://imagedelivery.net/B8t-3bYtbGcan-sTq11_Yg/e3597524-1981-48c6-5f8a-e936c9c28e00/public"
+            alt="IMG5"> <br>
+          <div>
+            <a href="CTA" class="btn CTA-btn">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-content">
+      <div>
+        <h1>Back in <br>
+          stock!
+        </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+      </div>
+      <div>
+        <img src="https://imagedelivery.net/B8t-3bYtbGcan-sTq11_Yg/e3a4aec4-b506-4b34-58ee-0fbc0a071500/public"
+          alt="IMG5">
+      </div>
+    </div>
+    <footer>
+      <span class="email-icon">
+        <a href="#email">
+          <img src="https://imagedelivery.net/B8t-3bYtbGcan-sTq11_Yg/9d24e813-f6e5-476f-ccb6-c030da127300/public"
+            alt="envelope-solid" class="img-icon">
+        </a>
+      </span>
+
+      <a href="#" class="link-email">elhosny01@gmail.com</a>
+
+      <span class="email-icon">
+        <a href="#camera">
+          <img src="https://imagedelivery.net/B8t-3bYtbGcan-sTq11_Yg/00ead335-ff47-4bd4-63e2-8363ad000800/public"
+            alt="camera-solid" class="img-icon">
+        </a>
+      </span>
+    </footer>
+  </div>
+</body>
+
+</html>
